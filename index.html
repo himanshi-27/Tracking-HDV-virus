@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <style>
+        div.tooltip {
+          position: absolute;
+          text-align: center;
+          width: 90px;
+          height: 28px;
+          padding: 2px;
+          font: 12px sans-serif;
+          background: lightsteelblue;
+          border: 0px;
+          border-radius: 8px;
+          pointer-events: none;
+}
+    </style>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <style>
+        path {
+            fill: none;
+            stroke-width: 1px;
+            stroke: #222;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Hepatitis Delta Cases in USA (2008-2010)</h1>
+<p class="info">Name: Himanshi Sharma; E-Mail: himanshi.sharma@utah.com; UID: U1168592</p>
+<p class="info">Name: Himanshi Sharma; E-Mail: himanshi.sharma@utah.com; UID: U1168592</p>
+<p class="info">Name: Himanshi Sharma; E-Mail: himanshi.sharma@utah.com; UID: U1168592</p>
+</div>
+
+<svg width="800" height="600">
+    <g id="mapLayer"></g>
+    <g id="cityLayer"></g>
+</svg>
+
+<script type="text/javascript">
+    {
+        let svg = d3.select("svg");
+        let width = parseInt(svg.attr("width"));
+        let height = parseInt(svg.attr("height"));
+
+        let projection = d3.geoAlbersUsa()
+            .translate([width / 2, height / 2])
+            .scale([700]);
+
+        let path = d3.geoPath()
+            .projection(projection);
+
+        // Load in GeoJSON data
+        d3.json("us-map.json", function (json) {
+            d3.select("#mapLayer").selectAll("path")
+                .data(json.features)
+                .enter()
+                .append("path")
+                .attr("d", path);
+        });
+
+
+        // Load in GeoJSON data
+        d3.json("us-map.json", function (json) {
+            d3.select("#mapLayer").selectAll("path")
+                .data(json.features)
+                .enter()
+                .append("path")
+                .attr("d", path);
+        });
+
+        var div = d3.select("body").append("div")
+            .attr("class", "tooltip")
+            .style("opacity", 0);
+
+        d3.csv("stateCountywise_hepD.csv", function (data) {
+            console.log(data);
+            d3.select("#cityLayer").selectAll("circle")
+                .data(data)
+                .enter()
+                .append("circle")
+                .attr("cx", function (d) {
+                    return projection([d.lon, d.lat])[0];
+                })
+                .attr("cy", function (d) {
+                    return projection([d.lon, d.lat])[1];
+                })
+                .attr("r", function (d) {
+                    return Math.sqrt(parseInt(d.cases) * 12);
+                })
+                .style("fill", "#d61b53")
+                .style("opacity", 0.5).on("mouseover", function(d) {
+                   div.transition()
+                     .duration(200)
+                     .style("opacity", .9);
+                   div.html(d.COUNTY)
+                     .style("left", (d3.event.pageX) + "px")
+                     .style("top", (d3.event.pageY - 28) + "px");
+                    })
+                .on("mouseout", function(d) {
+                   div.transition()
+                     .duration(500)
+                     .style("opacity", 0);
+                   }).on("click",function(d){
+                        if(d.cases >1){
+                             alert("The number of cases in the selected county are "+ d.cases);
+                         }else{
+                             alert("The number of cases in the selected county is "+ d.cases);
+                         }
+                   
+                   });
+        });
+    }
+</script>
+</body>
+</html>
