@@ -1,0 +1,126 @@
+STATE,RACE,cases,WHITE,BLACK,OTHERS,HISPANIC
+Alaska,WHITE,3,1,0,0,0
+Alabama,BLACK,10,0,1,0,0
+Alabama,OTHERS,1,0,0,1,0
+Alabama,WHITE,35,1,0,0,0
+Askansas,BLACK,6,0,1,0,0
+Arkansas,WHITE,21,1,0,0,0
+Arizona,HISPANIC,2,0,0,0,1
+Arizona,WHITE,32,1,0,0,0
+California,BLACK,12,0,1,0,0
+California,HISPANIC,21,0,0,0,1
+California,OTHERS,40,0,0,1,0
+California,WHITE,155,1,0,0,0
+Colorado,BLACK,2,0,1,0,0
+Colorado,HISPANIC,1,0,0,0,1
+Colorado,WHITE,28,1,0,0,0
+Connecticut,OTHERS,2,0,0,1,0
+Connecticut,WHITE,26,1,0,0,0
+District of Columbia,BLACK,3,0,1,0,0
+District of Columbia,WHITE,3,1,0,0,0
+Delaware,BLACK,1,0,1,0,0
+Delaware,WHITE,6,1,0,0,0
+Florida,BLACK,21,0,1,0,0
+Florida,HISPANIC,10,0,0,0,1
+Florida,OTHERS,3,0,0,1,0
+Florida,WHITE,154,1,0,0,0
+Georgia,BLACK,17,0,1,0,0
+Georgia,OTHERS,1,0,0,1,0
+Georgia,WHITE,44,1,0,0,0
+Hawaii,OTHERS,7,0,0,1,0
+Hawaii,WHITE,2,1,0,0,0
+Iowa,WHITE,24,1,0,0,0
+Idaho,HISPANIC,1,0,0,0,1
+Idaho,WHITE,10,1,0,0,0
+Illinois,BLACK,13,0,1,0,0
+Illinois,HISPANIC,2,0,0,0,1
+Illinois,OTHERS,3,0,0,1,0
+Illinoindiana,WHITE,78,1,0,0,0
+Indiana,BLACK,4,0,1,0,0
+Indiana,OTHERS,1,0,0,1,0
+Indiana,WHITE,49,1,0,0,0
+Kansas,BLACK,2,0,1,0,0
+Kansas,HISPANIC,1,0,0,0,1
+Kansas,WHITE,25,1,0,0,0
+Kentucky,BLACK,3,0,1,0,0
+Kentucky,WHITE,38,1,0,0,0
+Louisiana,BLACK,12,0,1,0,0
+Louisiana,WHITE,22,1,0,0,0
+Massachusetts,BLACK,3,0,1,0,0
+Massachusetts,HISPANIC,2,0,0,0,1
+Massachusetts,OTHERS,2,0,0,1,0
+Massachusetts,WHITE,53,1,0,0,0
+Maryland,BLACK,10,0,1,0,0
+Maryland,OTHERS,2,0,0,1,0
+Maryland,WHITE,32,1,0,0,0
+Maine,WHITE,11,1,0,0,0
+Michigan,BLACK,11,0,1,0,0
+Michigan,WHITE,63,1,0,0,0
+Minnesota,BLACK,1,0,1,0,0
+Minnesota,OTHERS,1,0,0,1,0
+Minnesota,WHITE,40,1,0,0,0
+Missouri,BLACK,4,0,1,0,0
+Missouri,OTHERS,1,0,0,1,0
+Missouri,WHITE,36,1,0,0,0
+Mississippi,BLACK,11,0,1,0,0
+Mississippi,WHITE,21,1,0,0,0
+Montana,OTHERS,1,0,0,1,0
+Montana,WHITE,10,1,0,0,0
+North Carolina,BLACK,7,0,1,0,0
+North Carolina,OTHERS,1,0,0,1,0
+North Carolina,WHITE,59,1,0,0,0
+North Dakota,WHITE,9,1,0,0,0
+Nebraska,WHITE,22,1,0,0,0
+New Hampshire,WHITE,14,1,0,0,0
+New Jersey,BLACK,7,0,1,0,0
+New Jersey,OTHERS,3,0,0,1,0
+New Jersey,WHITE,56,1,0,0,0
+New Mexico,HISPANIC,2,0,0,0,1
+New Mexico,OTHERS,1,0,0,1,0
+New Mexico,WHITE,11,1,0,0,0
+Nevada,BLACK,1,0,1,0,0
+Nevada,WHITE,14,1,0,0,0
+New York,BLACK,17,0,1,0,0
+New York,HISPANIC,9,0,0,0,1
+New York,OTHERS,16,0,0,1,0
+New York,WHITE,106,1,0,0,0
+Ohio,BLACK,8,0,1,0,0
+Ohio,WHITE,85,1,0,0,0
+Oklahoma,BLACK,2,0,1,0,0
+Oklahoma,OTHERS,3,0,0,1,0
+Oklahoma,WHITE,29,1,0,0,0
+Oregon,OTHERS,3,0,0,1,0
+Oregon,WHITE,26,1,0,0,0
+Others,BLACK,3,0,1,0,0
+Others,HISPANIC,5,0,0,0,1
+Others,OTHERS,2,0,0,1,0
+Others,WHITE,12,1,0,0,0
+Pennsylvania,BLACK,8,0,1,0,0
+Pennsylvania,HISPANIC,1,0,0,0,1
+Pennsylvania,OTHERS,2,0,0,1,0
+Pennsylvania,WHITE,85,1,0,0,0
+Rhode Island,WHITE,6,1,0,0,0
+South Carolina,BLACK,11,0,1,0,0
+South Carolina,WHITE,31,1,0,0,0
+South Dakota,WHITE,11,1,0,0,0
+Tennessee,BLACK,6,0,1,0,0
+Tennessee,WHITE,50,1,0,0,0
+Texas,BLACK,17,0,1,0,0
+Texas,HISPANIC,8,0,0,0,1
+Texas,OTHERS,4,0,0,1,0
+Texas,WHITE,110,1,0,0,0
+Utah,WHITE,11,1,0,0,0
+Virginia,BLACK,10,0,1,0,0
+Virginia,HISPANIC,1,0,0,0,1
+Virginia,OTHERS,1,0,0,1,0
+Virginia,WHITE,49,1,0,0,0
+Vermont,WHITE,10,1,0,0,0
+Washington,BLACK,2,0,1,0,0
+Washington,HISPANIC,1,0,0,0,1
+Washington,OTHERS,4,0,0,1,0
+Washington,WHITE,42,1,0,0,0
+West Virginia,BLACK,2,0,1,0,0
+West Virginia,WHITE,47,1,0,0,0
+West Virginia,BLACK,1,0,1,0,0
+West Virginia,WHITE,20,1,0,0,0
+Wyoming,WHITE,4,1,0,0,0

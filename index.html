@@ -28,15 +28,32 @@
 <body>
 
 <h1>Hepatitis Delta Cases in USA (2008-2010)</h1>
-<p class="info">Name: Himanshi Sharma; E-Mail: himanshi.sharma@utah.com; UID: u1168592</p>
-<p class="info">Name: Christopher John Peterson; E-Mail: chris.j.peterson@utah.edu; UID: u0586157</p>
-<p class="info">Name: Dayanidhi Tandra; E-Mail: u1189358@utah.edu UID: u1189358</p>
+<p class="info">Name: Himanshi Sharma; E-Mail: himanshi.sharma@utah.com; UID: U1168592</p>
+<p class="info">Name: Himanshi Sharma; E-Mail: himanshi.sharma@utah.com; UID: U1168592</p>
+<p class="info">Name: Himanshi Sharma; E-Mail: himanshi.sharma@utah.com; UID: U1168592</p>
 </div>
 
-<svg width="800" height="600">
+<h2>Hepatitis D cases in the USA from 2008-2010 grouped by County</h2>
+<svg width="800" height="400">
     <g id="mapLayer"></g>
     <g id="cityLayer"></g>
 </svg>
+</br>
+</br>
+
+<h2>Hepatitis B cases in the USA from 2008-2010 grouped by County</h2>
+<svg id="svg1" width="800" height="400">
+    <g id="mapLayer1"></g>
+    <g id="cityLayer1"></g>
+</svg>
+
+</br>
+<h2>Hepatitis B and Hepatitis D cases in the USA from 2008-2010 grouped by County</h2>
+<svg id="svg2" width="800" height="400">
+    <g id="mapLayer2"></g>
+    <g id="cityLayer2"></g>
+</svg>
+
 
 <script type="text/javascript">
     {
@@ -88,6 +105,123 @@
                 })
                 .attr("r", function (d) {
                     return Math.sqrt(parseInt(d.cases) * 12);
+                })
+                .style("fill", "#d61b53")
+                .style("opacity", 0.5).on("mouseover", function(d) {
+                   div.transition()
+                     .duration(200)
+                     .style("opacity", .9);
+                   div.html(d.COUNTY)
+                     .style("left", (d3.event.pageX) + "px")
+                     .style("top", (d3.event.pageY - 28) + "px");
+                    })
+                .on("mouseout", function(d) {
+                   div.transition()
+                     .duration(500)
+                     .style("opacity", 0);
+                   }).on("click",function(d){
+                        if(d.cases >1){
+                             alert("The number of cases in the selected county are "+ d.cases);
+                         }else{
+                             alert("The number of cases in the selected county is "+ d.cases);
+                         }
+                   
+                   });
+        });
+
+
+
+
+
+        d3.json("us-map.json", function (json) {
+            d3.select("#mapLayer1").selectAll("path")
+                .data(json.features)
+                .enter()
+                .append("path")
+                .attr("d", path);
+        });
+
+
+        // Load in GeoJSON data
+        d3.json("us-map.json", function (json) {
+            d3.select("#mapLayer1").selectAll("path")
+                .data(json.features)
+                .enter()
+                .append("path")
+                .attr("d", path);
+        });
+
+        var div = d3.select("body").append("div")
+            .attr("class", "tooltip")
+            .style("opacity", 0);
+
+        d3.csv("stateCounty_hepB.csv", function (data) {
+            console.log(data);
+            d3.select("#cityLayer1").selectAll("circle")
+                .data(data)
+                .enter()
+                .append("circle")
+                .attr("cx", function (d) {
+                    return projection([d.lon, d.lat])[0];
+                })
+                .attr("cy", function (d) {
+                    return projection([d.lon, d.lat])[1];
+                })
+                .attr("r", function (d) {
+                    return Math.sqrt(parseInt(d.cases) * 5);
+                })
+                .style("fill", "#d61b53")
+                .style("opacity", 0.5).on("mouseover", function(d) {
+                   div.transition()
+                     .duration(200)
+                     .style("opacity", .9);
+                   div.html(d.COUNTY)
+                     .style("left", (d3.event.pageX) + "px")
+                     .style("top", (d3.event.pageY - 28) + "px");
+                    })
+                .on("mouseout", function(d) {
+                   div.transition()
+                     .duration(500)
+                     .style("opacity", 0);
+                   }).on("click",function(d){
+                        if(d.cases >1){
+                             alert("The number of cases in the selected county are "+ d.cases);
+                         }else{
+                             alert("The number of cases in the selected county is "+ d.cases);
+                         }
+                   
+                   });
+        });
+
+
+
+
+        d3.json("us-map.json", function (json) {
+            d3.select("#mapLayer2").selectAll("path")
+                .data(json.features)
+                .enter()
+                .append("path")
+                .attr("d", path);
+        });
+
+        var div = d3.select("body").append("div")
+            .attr("class", "tooltip")
+            .style("opacity", 0);
+
+        d3.csv("stateCounty_hepB_hepD.csv", function (data) {
+            console.log(data);
+            d3.select("#cityLayer2").selectAll("circle")
+                .data(data)
+                .enter()
+                .append("circle")
+                .attr("cx", function (d) {
+                    return projection([d.lon, d.lat])[0];
+                })
+                .attr("cy", function (d) {
+                    return projection([d.lon, d.lat])[1];
+                })
+                .attr("r", function (d) {
+                    return Math.sqrt(parseInt(d.cases) * 5);
                 })
                 .style("fill", "#d61b53")
                 .style("opacity", 0.5).on("mouseover", function(d) {
